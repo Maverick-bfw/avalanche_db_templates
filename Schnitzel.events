@@ -1,0 +1,22 @@
+avalanche name; Schnitzel		[str]
+coordinate system; potato salad 	[str]
+coordinate zero;  2301	209522 		[list[float][float]]
+
+############## Columns ############
+x,	y,	z, 	year, 	pt type,	data source	ID,	classification,	forest,	outline, vol,	trigger
+float,	float,	float,	int,	str,		boolean,	int,	str,		boolean,boolean,float,	str
+
+144.0	282.0	555.0	1999	dep		measured	1	A2B0C1D3E2FGH	no	no	nan
+135	252	443	1999	dep		measured	2			yes	yes 	493	nan
+23	20	2502	1999	rel		expert ass	2  			no	yes	432	boom/ski/nat 
+44(beta)44(beta)239	1999	trk 		expert ass	2			yes	yes	not useful
+115	209	484	1957	dep		measured	1			nan	no	-	nan
+143	332	377	1957	pow		measured	1			yes	yes	nan	nan
+
+##################################
+ID is used to make each avalanche unique so if there are two of them in the same year we can link a starting zone with a depo zone via the ID
+forest is only if forest is in the "pt type" deposition zone or release zone  (track info is in header of .track file)
+
+Classification is the number used by the avalanche atlas # for the sql db we will break the string up in table form
+
+for track we put the point on the beta point this is a beta point from the field or made via gis expert defined. we will have a different place for beta from a model but that is a derivatives file. 
