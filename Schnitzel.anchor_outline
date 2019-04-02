@@ -6,12 +6,12 @@ date made: 20190327			[int]
 outline source: photo, field, gps	[?]
 outline type: release/track/depo	[str]
 ############## Columns ############
-pt no.,	x,	y
-int	float	float
+pt no., 	x,      y
+int	        float   float
 
-0	0,	0			# this should start at 0,0
-1	57,	14	
-2	98,	-12	
-3	155,	-66	
+0	        0.0	    0.0
+1	        57.3    14.3
+2	        98.4    -12.4
+3	        155.0   -66.4
 
-
+##################################

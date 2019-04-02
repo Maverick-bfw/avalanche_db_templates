@@ -1,20 +1,24 @@
-avalanche name; Schnitzel	[str]
-coordinate system; potato salad [str]
-coordinate zero;  2301	209522	[list[float][float]]
-dhm: Granten			[str]
-forest in track: yes 		[boolean]
-terrain complexity:  		[str]	(use slide 35 of 2017_03vl_lawine_grundlagen_d_mq.pdf and page 30 of avalanch_atlas.pdf )
-outline source: photo, field, gps	[?]
-outline type: release/track/depo	[str]
+avalanche name;     Schnitzel	      [str]
+coordinate system;  potato salad      [str]
+coordinate zero;    2301	209522	  [list[float][float]]
+dhm:                Granten			  [str]
+forest in track:    yes 		      [boolean]
+terrain complexity: 2 		          [str]
+outline source:     photo             [str]
+outline type:       release	          [str]
 
 
 ############## Columns ############
-x,	y,	z,
-float, float,	float
+x,	    y,	    z,
+float,  float,	float
 
-0,	0,	2634
-1,	0,	2633
-1,	2,	2630
-2,	3,	2629
+0.0     0.0     2634.1
+1.2     0.4     2633.6
+1.7	    2.3     2630.8
+2.7	    3.6	    2629.5
 
 
+##################################
+outline source  photo, field, gps
+outline type  release/track/depo
+Terrain complexity (use slide 35 of 2017_03vl_lawine_grundlagen_d_mq.pdf and page 30 of avalanch_atlas.pdf )
