@@ -1,9 +1,9 @@
-avalanche name; Schnitzel		[str]
+avalanche name; Schnitzel		    [str]
 coordinate system; potato salad		[str]
 coordinate zero;  2301	209522		[list[float][float]]
-name; Mr Kalbfleisch			[str]	# is this needed?
-date made: 20190327			[int]
-outline source: photo, field, gps	[?]
+name; Mr Kalbfleisch			    [str]	# is this needed?
+date made: 2019-03-27			    [date]
+outline source: photo, field, gps	[str]
 outline type: release/track/depo	[str]
 ############## Columns ############
 pt no., 	x,      y
