@@ -1,22 +1,36 @@
-avalanche name;     Schnitzel		      [str]
-coordinate system;  potato salad 	      [str]
-coordinate zero;    2301	209522 		  [list[float][float]]
-
+avalanche name;     Schnitzel		                                                   [str]
+epsg code;          potato salad 	                                                 [str]
+coordinate zero;    2301	209522 		                                               [list[float][float]]
+dtm;                https://www.data.gv.at/katalog/dataset/land-tirol_tirolgelnde  [str]
 ############## Columns ############
-x,	     y,	     z, 	year, 	pt type,	data source,	ID,    classification,	forest,	outline,    vol,    trigger
-float,	 float,	 float,	int,	str,		boolean,	    int,   str,	            bool,   bool,       float	str
+pt type, x,	     y,	     z, 	year, month, day, data source,	ID,    classification,	forest,	outline,    vol,    trigger
+float,	 float,	 float,	int, int, int, str,		boolean,	    int,   str,	            bool,   bool,       float	str
 
-144.0	 282.0	 555.0	1999	dep		    measured	    1	    A2B0C1D3E2FGH	no	    no	        nan     Nan
-135.	 252.	 443.	1999	dep		    measured	    2		A2B0C1D3E2FGH	yes	    yes 	    493.3   nan
-23.	     20.     2502.	1999	rel		    expert ass	    2  		A2B0C1D3E2FGH	no	    yes	        432	    S
-44.      44.     239.	1999	trk 		expert ass	    2		A2B0C1D3E2FGH	yes	    yes	        not     useful
-115.     209.	 484.	1957	dep		    measured	    1		A2B0C1D3E2FGH	nan	    no	        Nan	    nan
-143.     332.	 377.	1957	pow		    measured	    1		A2B0C1D3E2FGH	yes	    yes	        nan	    nan
+dep 144.0	 282.0  555.0 1999 04 02 measured	    1	    A2B0C1D3E2FGH	no	    no	        nan     Nan
+dep 135.	 252.	 443.	1999 measured	    2		A2B0C1D3E2FGH	yes	    yes 	    493.3   nan
+rel 23.	     20.     2502.	1999 expert ass	    2  		A2B0C1D3E2FGH	no	    yes	        432	    Skier
+trk 44.      44.     239.	1999 expert ass	    2		A2B0C1D3E2FGH	yes	    yes	        not     useful
+dep 115.     209.	 484.	1957 measured	    1		A2B0C1D3E2FGH	nan	    no	        Nan	    nan
+pow 143.     332.	 377.	1957 measured	    1		A2B0C1D3E2FGH	yes	    yes	        nan	    nan
 
 ##################################
-ID is used to make each avalanche unique so if there are two of them in the same year we can link a starting zone with a depo zone via the ID
-forest is only if forest is in the "pt type" deposition zone or release zone  (track info is in header of .track file)
-
-Classification is the number used by the avalanche atlas # for the sql db we will break the string up in table form
+avalanche name: the used designation of the avalanche, named by state institutions etc.; if there exist two "official" designations, use the one closer the the alphabet´s A
+epsg code: "European Petroleum Survey Group Geodesy"; these code is a widely tool for indicating the spatial reference of geodata and includes the completely description of the used coordinate reference system for international exchange
+coordinate zero: includes the x und y coordinate of the origin of every GIS-processed data; it is representing the upper most point of the digitized avalanche path
+dtm: digital terrain model; exact titling of the dtm-source; can be the online link or - if no online link known - the file path where the dtm is stored
+pt type: includes short informtation about what part of the avalanche process the point is representing (release, track, deposit)
+x: x-coordinate of the event-point
+y: y-coordinate of the event-point
+z: z-coordinate of the event-point
+year: the year, in which the event took place
+month: the month, in which the event took place
+day: the day, on which the event took place
+data source: short description about how the point was defined, either measurement (measured) or expert assessment (expert ass)
+ID: is used to make each avalanche unique; so if there are two of them in the same year we can link a starting zone with a depo zone via the ID
+classification: is the number used by the "Avalanche atlas - Illustrated international avalanche classification, UNESCO 1981" (page 30: "Morphological classification of avalanches"); for the sql db we will break the string up in table form
+forest: is only if forest is in the "pt type" deposition zone or release zone  (track info is in header of .track-file)
+outline: if there is an outline file corresponding to the event point choose "yes", if not choose "no"
+vol: the calculated or estimated volume of the avalanche event in cubic meters
+trigger: describes, how the avalanche was triggered after the reference "CAA OGRS 2014 p.51" (natural, artificial)
 
 for track we put the point on the beta point this is a beta point from the field or made via gis expert defined. we will have a different place for beta from a model but that is a derivatives file.

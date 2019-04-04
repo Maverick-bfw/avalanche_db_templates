@@ -1,10 +1,10 @@
 avalanche name;         Schnitzel	    [str]
-coordinate system;      potato salad    [str]
+epsg code;      potato salad    [str]
 coordinate zero;        2301	209522	[list[float][float]]
-dhm:                    Granten			[str]
+dtm:                    Granten			[str]
 forest in track:        yes 		    [boolean]
-terrain complexity:  	3	            [str]
-
+terrain complexity:  	  3	            [str]
+mitigation measures:    dam
 
 ############## Columns ############
 x	    y       z
@@ -16,4 +16,13 @@ float   float	float
 2.4	    3.7	    2629.8
 
 #################################
-terrain complexity use slide 35 of 2017_03vl_lawine_grundlagen_d_mq.pdf and page 30 of avalanch_atlas.pdf )
+avalanche name: the used designation of the avalanche, named by state institutions etc.; if there exist two "official" designations, use the one closer the the alphabet´s A
+epsg code: "European Petroleum Survey Group Geodesy"; these code is a widely tool for indicating the spatial reference of geodata and includes the completely description of the used coordinate reference system for international exchange
+coordinate zero: includes the x und y coordinate of the origin of every GIS-processed data; it is representing the upper most point of the digitized avalanche path
+dtm: digital terrain model; exact titling of the dtm-source; can be the online link or - if no online link known - the file path where the dtm is stored
+forest in track: describes if there is forest land somewhere in the avalanche track; with "yes" or "no"
+terrain complexity: describes the release area consisting of either 1 "1", 2 to 3 "2" or more "3" release surfaces / areas
+mitigation measures: describes if threre are any mitigation measures inside the release-, transit- or deposition-area (dams, stabilizing structures, splitter, breaker, gallery)
+x: x-coordinate of the GIS generated point inside the outline path
+y: y-coordinate of the GIS generated point inside the outline path
+z: corresponding elevation of the x- and y-coordinate generated out of the dtm

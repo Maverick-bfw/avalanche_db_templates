@@ -1,10 +1,11 @@
-avalanche name; Schnitzel		    [str]
-coordinate system; potato salad		[str]
-coordinate zero;  2301	209522		[list[float][float]]
-name; Mr Kalbfleisch			    [str]	# is this needed?
-date made: 2019-03-27			    [date]
-outline source: photo, field, gps	[str]
-outline type: release/track/depo	[str]
+avalanche name; Schnitzel		        [str]
+epsg code; potato salad		          [str]
+coordinate zero;  2301	209522		  [list[float][float]]
+reviser; Mr Kalbfleisch			        [str]
+creation date: 2019-03-27   			  [date]
+outline source: photo, field, gps	  [str]
+outline type: release/track/deposit	[str]
+evente date: 2001-01-17             [date]
 ############## Columns ############
 pt no., 	x,      y
 int	        float   float
@@ -15,3 +16,12 @@ int	        float   float
 3	        155.0   -66.4
 
 ##################################
+avalanche name: the used designation of the avalanche, named by state institutions etc.; if there exist two "official" designations, use the one closer the the alphabet´s A
+epsg code: "European Petroleum Survey Group Geodesy"; these code is a widely tool for indicating the spatial reference of geodata and includes the completely description of the used coordinate reference system for international exchange
+coordinate zero: includes the x und y coordinate of the origin of every GIS-processed data; it is representing the upper most point of the digitized avalanche path
+reviser: is the surname of the person who generated the present data
+creation date: date of data generating
+outline source: includes short information on which source the digitized data is based on (photo, field recording, gps, narration, chronicle)
+outline type: includes short informtation about what part of the avalanche process the outline is representing (release, track, deposit)
+evente date: is the date when the event, which the outline is representing, happend
+pt no: ongoing number of the digitized anchor points
